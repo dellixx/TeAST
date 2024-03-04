@@ -140,8 +140,8 @@ class TeAST(TKBCModel):
         super(TeAST, self).__init__()
         self.sizes = sizes
         self.rank = rank
-        self.W = nn.Embedding(2*rank, 1, sparse=True)
-        self.W.weight.data *= 0
+        # self.W = nn.Embedding(2*rank, 1, sparse=True)
+        # self.W.weight.data *= 0
 
         self.embeddings = nn.ModuleList([
             nn.Embedding(s, 2 * rank, sparse=True)
